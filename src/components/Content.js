@@ -1,8 +1,4 @@
 import React, {Component} from 'react'
-import avatar3 from '../assets/img/avatar.png';
-import avatar4 from '../assets/img/avatar4.png';
-import avatar5 from '../assets/img/avatar5.png';
-import avatar6 from '../assets/img/avatar6.png';
 import UserList from './UserList'
 import _moment from 'moment';
 

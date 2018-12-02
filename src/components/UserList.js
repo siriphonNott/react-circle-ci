@@ -77,11 +77,17 @@ class UserList extends Component {
                     isCheckPoint[index] = classCheck[0];
                 }
             }
+            let displayName = '';
+            let pictureUrl = '';
+            if(item.profile !== undefined) {
+                pictureUrl = item.profile.pictureUrl ;
+                displayName = item.profile.displayName;
+            }
             
             return (
                 <tr key={item.key} id={item.key}>
                     <td className="user-avatar"> 
-                        <img src={item.profile.pictureUrl} alt="Avatar" />{item.profile.displayName}
+                        <img src={pictureUrl} alt="Avatar" />{displayName}
                     </td>
                     <td>{item.follow}</td>
                     <Td><div className="icon"><span className={isCheckPoint[0]}></span></div></Td>
