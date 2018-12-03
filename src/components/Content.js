@@ -16,6 +16,14 @@ class Content extends Component {
                 totalFollow:totalFollow.length
             });
         });
+        dbCon.on('value', snapshot => {
+            let totalUser =  Object.keys(snapshot.val()).length
+            let totalFollow = _.filter(snapshot.val(), (o) => o.follow === 'follow' );
+            this.setState({
+                totalUser:totalUser,
+                totalFollow:totalFollow.length
+            });
+        });
         this.state = {
             totalUser:0,
             totalFollow:0,

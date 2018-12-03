@@ -49,16 +49,6 @@ class UserList extends Component {
         return checkPoint;
     }
     render() {
-        let isCheck = {};
-        let statusSign = {
-            display: 'inline-block',
-            height: '10px',
-            width: '10px',
-            borderRadius: '50%',
-            backgroundColor: '#06e84c',
-            marginRight: '2px'
-        }
-
         const Td = styled.td`text-align: center;`;
         let userCheckedPoint = this.getDataFromDate();
         let Userlist = _.map(this.state.userList, (item,index) => {
