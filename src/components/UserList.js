@@ -71,9 +71,7 @@ class UserList extends Component {
 
             for (let index = 0; index <= 12; index++) {
                 let time = (index+7);
-                // console.log();
-                
-                if(  _.find(user, (item) => item == time) ) {
+                if(  _.find(user.times, (item) => item == time) ) {
                     isCheckPoint[index] = classCheck[1];
                 } else {
                     isCheckPoint[index] = classCheck[0];
