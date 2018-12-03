@@ -32,7 +32,7 @@ class UserList extends Component {
             let item = {};
             item.key = value.key;
             item.times = [];
-            let today = `${moment.year()}${moment.month()}${moment.date()}`;
+            let today = moment.format('YYYYMMDD');
             if(value.checkpointReport !== undefined && value.checkpointReport[today] !== undefined) {
                 let timeChecked = [];
                 let isCheckPoint = _.forEach(value.checkpointReport[today] ,(value, index) => {
@@ -71,6 +71,8 @@ class UserList extends Component {
 
             for (let index = 0; index <= 12; index++) {
                 let time = (index+7);
+                // console.log();
+                
                 if(  _.find(user, (item) => item == time) ) {
                     isCheckPoint[index] = classCheck[1];
                 } else {
