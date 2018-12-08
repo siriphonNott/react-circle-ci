@@ -15,7 +15,7 @@ class Header extends Component {
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
                                         <img src={avatar}  alt="Avatar" />
-                                        <span className="user-name">NottDev</span>
+                                        <span className="user-name">NottDev01</span>
                                     </a>
                                     <div className="dropdown-menu" role="menu">     
                                         <div className="user-info">

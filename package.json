@@ -20,7 +20,8 @@
   "scripts": {
     "start": "webpack-dev-server --open --port 4000 --compress --mode development",
     "dev": "webpack --mode development --progress",
-    "build": "webpack --mode production --progress"
+    "build": "webpack --mode production --progress",
+     "deploy": "yarn build && aws s3 sync build/ s3://reactcircleci.com --delete"
   },
   "eslintConfig": {
     "extends": "react-app"
