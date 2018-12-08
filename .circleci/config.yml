@@ -8,6 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: "circleci/node:7.10"
+      - run: "true"
       
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -19,8 +20,8 @@ steps:
   - "checkout"
   # Log the current branch
   - run:
-      name: "Show current branch"
-      command: "echo ${CIRCLE_BRANCH}"
+    name: "Show current branch"
+    command: "echo ${CIRCLE_BRANCH}"
 # Download and cache dependencies
   - restore_cache:
     keys:
@@ -29,9 +30,9 @@ steps:
       - "v1-dependencies-"
   - run: "yarn install"
   - save_cache:
-      paths:
-        - "node_modules"
-      key: "v1-dependencies-{{ checksum \"package.json\" }}"
+    paths:
+      - "node_modules"
+    key: "v1-dependencies-{{ checksum \"package.json\" }}"
           
   # run tests!
   - run: "sudo apt-get update && sudo apt-get install -y python-dev"
