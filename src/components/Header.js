@@ -19,7 +19,7 @@ class Header extends Component {
                                     </a>
                                     <div className="dropdown-menu" role="menu">     
                                         <div className="user-info">
-                                            <div className="user-name">NottDev</div>
+                                            <div className="user-name">NottDev01</div>
                                             <div className="user-position online">Available</div>
                                         </div>
                                         <a className="dropdown-item" href="#"><span className="icon mdi mdi-face"></span>Account</a>
